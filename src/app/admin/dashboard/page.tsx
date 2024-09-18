@@ -1,4 +1,4 @@
-import AdminDashboard from "@/components/AdminDashboard/AdminDashboard";
+import AdminDashboard from "@/components/admin/AdminDashboard";
 import React from "react";
 
 function AdminDashboardPage() {

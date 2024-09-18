@@ -1,0 +1,785 @@
+{
+    "pets": [
+        {
+            "name": "Oliver",
+            "breed": "Maine Coon",
+            "gender": "male",
+            "size": "large",
+            "sku": "MAINE001",
+            "color": "Brown Tabby",
+            "vaccinated": true,
+            "dewormed": true,
+            "info": "Oliver is a friendly Maine Coon with a playful personality. He is fully vaccinated and dewormed, ready for a loving home.",
+            "description": "Oliver is the gentle giant of the cat world! Maine Coons are known for their affectionate nature and playful spirit, making them ideal companions.",
+            "images": [],
+            "category": "cat",
+            "price": 829.48,
+            "discount": 12.89,
+            "rating": 4.3
+        },
+        {
+            "name": "Luna",
+            "breed": "Siamese",
+            "gender": "female",
+            "size": "medium",
+            "sku": "SIAM002",
+            "color": "Seal Point",
+            "vaccinated": true,
+            "dewormed": true,
+            "info": "Luna is a talkative Siamese who loves attention. She is fully vaccinated and dewormed, looking for a forever family.",
+            "description": "Luna is a social butterfly! Siamese cats are known for their vocal personalities and strong bonds with their humans.",
+            "images": [],
+            "category": "cat",
+            "price": 829.48,
+            "discount": 12.89,
+            "rating": 4.3
+        },
+        {
+            "name": "Leo",
+            "breed": "Bengal",
+            "gender": "male",
+            "size": "medium",
+            "sku": "BENG003",
+            "color": "Spotted Brown",
+            "vaccinated": true,
+            "dewormed": false,
+            "info": "Leo is an energetic Bengal with a love for play. He is vaccinated but not yet dewormed, making him an exciting addition to any home.",
+            "description": "Leo is a wild spirit! Bengals are known for their striking appearance and playful nature, perfect for active families.",
+            "images": [],
+            "category": "cat",
+            "price": 829.48,
+            "discount": 12.89,
+            "rating": 4.3
+        },
+        {
+            "name": "Bella",
+            "breed": "Persian",
+            "gender": "female",
+            "size": "medium",
+            "sku": "PERS004",
+            "color": "White",
+            "vaccinated": true,
+            "dewormed": true,
+            "info": "Bella is a calm Persian who enjoys lounging around. She is fully vaccinated and dewormed, ready for her new cozy home.",
+            "description": "Bella is the queen of relaxation! Persians are known for their gentle demeanor and fluffy coats, perfect for lap time.",
+            "images": [],
+            "category": "cat",
+            "price": 829.48,
+            "discount": 12.89,
+            "rating": 4.3
+        },
+        {
+            "name": "Max",
+            "breed": "Scottish Fold",
+            "gender": "male",
+            "size": "medium",
+            "sku": "SCOT005",
+            "color": "Grey",
+            "vaccinated": true,
+            "dewormed": true,
+            "info": "Max is an adorable Scottish Fold with unique ears. He is fully vaccinated and dewormed, ready for a family to love him.",
+            "description": "Max is as unique as they come! Scottish Folds are known for their distinctive ear shape and playful attitude, making them delightful companions.",
+            "images": [],
+            "category": "cat",
+            "price": 829.48,
+            "discount": 12.89,
+            "rating": 4.3
+        },
+        {
+            "name": "Daisy",
+            "breed": "Ragdoll",
+            "gender": "female",
+            "size": "large",
+            "sku": "RAGD006",
+            "color": "Blue Point",
+            "vaccinated": false,
+            "dewormed": false,
+            "info": "Daisy is a sweet Ragdoll who loves to cuddle. She is not vaccinated or dewormed yet, looking for a caring owner.",
+            "description": "Daisy is the ultimate cuddle buddy! Ragdolls are known for their docile and affectionate nature, perfect for families.",
+            "images": [],
+            "price": 829.48,
+            "discount": 12.89,
+            "rating": 4.3
+        },
+        {
+            "name": "Jasper",
+            "breed": "Sphynx",
+            "gender": "male",
+            "size": "medium",
+            "sku": "SPHYN007",
+            "color": "Fawn",
+            "vaccinated": true,
+            "dewormed": true,
+            "info": "Jasper is a playful Sphynx with a unique look. He is fully vaccinated and dewormed, ready for a fun-loving home.",
+            "description": "Jasper is a quirky companion! Sphynx cats are known for their friendly and social personalities, making them great for all ages.",
+            "images": [],
+            "category": "cat",
+            "price": 829.48,
+            "discount": 12.89,
+            "rating": 4.3
+        },
+        {
+            "name": "Cleo",
+            "breed": "Burmese",
+            "gender": "female",
+            "size": "medium",
+            "sku": "BURM008",
+            "color": "Champagne",
+            "vaccinated": true,
+            "dewormed": false,
+            "info": "Cleo is a loving Burmese who enjoys being around people. She is vaccinated but not dewormed yet, making her a great candidate for a caring owner.",
+            "description": "Cleo is your affectionate friend! Burmese cats are known for their playful and social nature, making them perfect for families.",
+            "images": [],
+            "category": "cat",
+            "price": 829.48,
+            "discount": 12.89,
+            "rating": 4.3
+        },
+        {
+            "name": "Toby",
+            "breed": "Abyssinian",
+            "gender": "male",
+            "size": "medium",
+            "sku": "ABY009",
+            "color": "Ruddy",
+            "vaccinated": true,
+            "dewormed": true,
+            "info": "Toby is an adventurous Abyssinian who loves to explore. He is fully vaccinated and dewormed, ready for new adventures.",
+            "description": "Toby is the explorer of your dreams! Abyssinians are known for their playful and active nature, making them ideal companions for the adventurous.",
+            "images": [],
+            "category": "cat",
+            "price": 829.48,
+            "discount": 12.89,
+            "rating": 4.3
+        },
+        {
+            "name": "Mittens",
+            "breed": "Russian Blue",
+            "gender": "female",
+            "size": "medium",
+            "sku": "RUSS010",
+            "color": "Blue",
+            "vaccinated": true,
+            "dewormed": true,
+            "info": "Mittens is a gentle Russian Blue who enjoys quiet time. She is fully vaccinated and dewormed, seeking a peaceful home.",
+            "description": "Mittens is the serene companion you’ve been looking for! Russian Blues are known for their calm demeanor and striking appearance, perfect for a cozy household.",
+            "images": [],
+            "category": "cat",
+            "price": 829.48,
+            "discount": 12.89,
+            "rating": 4.3
+        },
+        {
+            "name": "Max",
+            "breed": "Labrador Retriever",
+            "gender": "male",
+            "size": "large",
+            "sku": "LAB001",
+            "color": "Yellow",
+            "vaccinated": true,
+            "dewormed": true,
+            "info": "Max is a friendly Labrador Retriever from a loving home. He is fully vaccinated and dewormed, ready for his new family.",
+            "description": "Max is the ultimate family dog! His playful nature and friendly demeanor make him perfect for families and active individuals. Get ready for endless adventures!",
+            "images": [],
+            "category": "dog",
+            "price": 829.48,
+            "discount": 12.89,
+            "rating": 4.3
+        },
+        {
+            "name": "Bella",
+            "breed": "Golden Retriever",
+            "gender": "female",
+            "size": "large",
+            "sku": "GOLD002",
+            "color": "Golden",
+            "vaccinated": true,
+            "dewormed": true,
+            "info": "Bella is a charming Golden Retriever with a sunny personality. She is vaccinated and dewormed, eager to please her new owner.",
+            "description": "Bella is your ideal companion! Known for their loyalty and intelligence, Golden Retrievers make excellent family pets and enjoy outdoor activities.",
+            "images": [],
+            "category": "dog",
+            "price": 829.48,
+            "discount": 12.89,
+            "rating": 4.3
+        },
+        {
+            "name": "Charlie",
+            "breed": "French Bulldog",
+            "gender": "male",
+            "size": "medium",
+            "sku": "FREN003",
+            "color": "Brindle",
+            "vaccinated": true,
+            "dewormed": false,
+            "info": "Charlie is a playful French Bulldog. He has been vaccinated but not dewormed yet, making him a delightful addition to any home.",
+            "description": "Charlie is a true lap dog! With his affectionate nature and playful spirit, he’ll bring joy and companionship to your life.",
+            "images": [],
+            "category": "dog",
+            "price": 829.48,
+            "discount": 12.89,
+            "rating": 4.3
+        },
+        {
+            "name": "Daisy",
+            "breed": "Beagle",
+            "gender": "female",
+            "size": "medium",
+            "sku": "BEAG004",
+            "color": "Tri-color",
+            "vaccinated": true,
+            "dewormed": true,
+            "info": "Daisy is an energetic Beagle, fully vaccinated and dewormed. She loves to explore and is ready for her forever home.",
+            "description": "Daisy is full of life! Beagles are known for their curiosity and playful attitude, making them perfect for active families.",
+            "images": [],
+            "category": "dog",
+            "price": 829.48,
+            "discount": 12.89,
+            "rating": 4.3
+        },
+        {
+            "name": "Rocky",
+            "breed": "German Shepherd",
+            "gender": "male",
+            "size": "large",
+            "sku": "GERM005",
+            "color": "Black",
+            "vaccinated": true,
+            "dewormed": true,
+            "info": "Rocky is a loyal German Shepherd, fully vaccinated and dewormed. He is intelligent and protective, perfect for a family companion.",
+            "description": "Rocky is the protector you’ve been looking for! German Shepherds are known for their courage and loyalty, making them great family pets and guardians.",
+            "images": [],
+            "category": "dog",
+            "price": 829.48,
+            "discount": 12.89,
+            "rating": 4.3
+        },
+        {
+            "name": "Luna",
+            "breed": "Poodle",
+            "gender": "female",
+            "size": "medium",
+            "sku": "POO006",
+            "color": "White",
+            "vaccinated": false,
+            "dewormed": false,
+            "info": "Luna is a lovely Poodle with a playful spirit. She is not vaccinated or dewormed yet, making her a great candidate for a caring owner.",
+            "description": "Luna is the epitome of elegance! Poodles are intelligent and trainable, making them ideal companions for families and individuals alike.",
+            "images": [],
+            "category": "dog",
+            "price": 829.48,
+            "discount": 12.89,
+            "rating": 4.3
+        },
+        {
+            "name": "Cooper",
+            "breed": "Bulldog",
+            "gender": "male",
+            "size": "medium",
+            "sku": "BULL007",
+            "color": "Fawn",
+            "vaccinated": true,
+            "dewormed": true,
+            "info": "Cooper is a friendly Bulldog, fully vaccinated and dewormed. He enjoys short walks and lots of cuddles.",
+            "description": "Cooper is your perfect snuggle buddy! Bulldogs are known for their calm demeanor and loving nature, making them excellent companions.",
+            "images": [],
+            "category": "dog",
+            "price": 829.48,
+            "discount": 12.89,
+            "rating": 4.3
+        },
+        {
+            "name": "Molly",
+            "breed": "Dachshund",
+            "gender": "female",
+            "size": "small",
+            "sku": "DACH008",
+            "color": "Red",
+            "vaccinated": true,
+            "dewormed": false,
+            "info": "Molly is an adorable Dachshund with a curious nature. She is vaccinated but has not been dewormed yet, perfect for a dedicated owner.",
+            "description": "Molly is full of character! Dachshunds are playful and loyal, making them wonderful pets for families or individuals looking for companionship.",
+            "images": [],
+            "category": "dog",
+            "price": 829.48,
+            "discount": 12.89,
+            "rating": 4.3
+        },
+        {
+            "name": "Bailey",
+            "breed": "Rottweiler",
+            "gender": "male",
+            "size": "large",
+            "sku": "ROTT009",
+            "color": "Black",
+            "vaccinated": true,
+            "dewormed": true,
+            "info": "Bailey is a strong and protective Rottweiler, fully vaccinated and dewormed. He is a gentle giant, ready for a loving home.",
+            "description": "Bailey is the protector of your dreams! Rottweilers are known for their loyalty and intelligence, making them great family guardians.",
+            "images": [],
+            "category": "dog",
+            "price": 829.48,
+            "discount": 12.89,
+            "rating": 4.3
+        },
+        {
+            "name": "Sadie",
+            "breed": "Shih Tzu",
+            "gender": "female",
+            "size": "small",
+            "sku": "SHIH010",
+            "color": "Black/White",
+            "vaccinated": true,
+            "dewormed": true,
+            "info": "Sadie is a sweet Shih Tzu, fully vaccinated and dewormed. She loves to cuddle and is looking for a cozy home.",
+            "description": "Sadie is the definition of cuteness! Shih Tzus are affectionate and playful, making them perfect companions for families or individuals.",
+            "images": [],
+            "category": "dog",
+            "price": 829.48,
+            "discount": 12.89,
+            "rating": 4.3
+        },
+        {
+            "name": "Koda",
+            "breed": "Siberian Husky",
+            "gender": "male",
+            "size": "large",
+            "sku": "HUSKY011",
+            "color": "Gray/White",
+            "vaccinated": true,
+            "dewormed": true,
+            "info": "Koda is a lively Siberian Husky with striking blue eyes. He is fully vaccinated and dewormed, ready for an active family.",
+            "description": "Koda is your adventure buddy! Huskies are known for their energetic and friendly nature, making them perfect for those who love outdoor activities.",
+            "images": [],
+            "category": "dog"
+        }
+    ],
+    "reviews": [
+        {
+            "rating": 5,
+            "review": "Max is an incredible companion! He's so friendly and playful, and my kids adore him.",
+            "images": [],
+            "category": "dog",
+            "date": 1695255600000
+        },
+        {
+            "rating": 4,
+            "review": "Bella is a lovely dog! She’s very obedient and learns tricks quickly.",
+            "images": [],
+            "category": "dog",
+            "date": 1695179200000
+        },
+        {
+            "rating": 5,
+            "review": "Charlie has brought so much joy to our home! He loves to cuddle and play.",
+            "images": [],
+            "category": "dog",
+            "date": 1695269200000
+        },
+        {
+            "rating": 3,
+            "review": "Daisy is cute but very energetic! Requires a lot of exercise.",
+            "images": [],
+            "category": "dog",
+            "date": 1695337200000
+        },
+        {
+            "rating": 5,
+            "review": "Rocky is such a loyal dog. He protects our family and loves to play fetch!",
+            "images": [],
+            "category": "dog",
+            "date": 1695110400000
+        },
+        {
+            "rating": 4,
+            "review": "Luna is adorable! She loves to be around us and is very playful.",
+            "images": [],
+            "category": "dog",
+            "date": 1695340800000
+        },
+        {
+            "rating": 5,
+            "review": "Cooper is the best cuddle buddy. We love having him around!",
+            "images": [],
+            "category": "dog",
+            "date": 1695265600000
+        },
+        {
+            "rating": 4,
+            "review": "Molly is sweet but can be a bit stubborn. Overall, a great addition to our family.",
+            "images": [],
+            "category": "dog",
+            "date": 1695192800000
+        },
+        {
+            "rating": 5,
+            "review": "Bailey is such a gentle giant! He gets along well with my kids.",
+            "images": [],
+            "category": "dog",
+            "date": 1695218400000
+        },
+        {
+            "rating": 3,
+            "review": "Sadie is adorable, but she needs more training. She’s very playful.",
+            "images": [],
+            "category": "dog",
+            "date": 1695187200000
+        },
+        {
+            "rating": 5,
+            "review": "Koda is so much fun! We love taking him on hikes.",
+            "images": [],
+            "category": "dog",
+            "date": 1695259200000
+        },
+        {
+            "rating": 4,
+            "review": "Niko is a great pet! She's a bit independent but very loving.",
+            "images": [],
+            "category": "dog",
+            "date": 1695206400000
+        },
+        {
+            "rating": 5,
+            "review": "Oliver has the best personality! He is so friendly and loves everyone.",
+            "images": [],
+            "category": "cat",
+            "date": 1695302400000
+        },
+        {
+            "rating": 4,
+            "review": "Luna the Siamese is so vocal and engaging! She keeps us entertained.",
+            "images": [],
+            "category": "cat",
+            "date": 1695267600000
+        },
+        {
+            "rating": 5,
+            "review": "Leo is a bundle of energy! He keeps us on our toes.",
+            "images": [],
+            "category": "cat",
+            "date": 1695327600000
+        },
+        {
+            "rating": 3,
+            "review": "Bella is beautiful but requires regular grooming.",
+            "images": [],
+            "category": "cat",
+            "date": 1695230400000
+        },
+        {
+            "rating": 5,
+            "review": "Max the Scottish Fold is so unique and playful. We love him!",
+            "images": [],
+            "category": "cat",
+            "date": 1695144000000
+        },
+        {
+            "rating": 4,
+            "review": "Daisy is a cuddly Ragdoll, loves to be held. Perfect lap cat!",
+            "images": [],
+            "category": "cat",
+            "date": 1695177600000
+        },
+        {
+            "rating": 5,
+            "review": "Jasper is such a fun Sphynx! He’s full of personality and loves to play.",
+            "images": [],
+            "category": "cat",
+            "date": 1695237600000
+        },
+        {
+            "rating": 4,
+            "review": "Cleo the Burmese is very affectionate. She loves to follow me around.",
+            "images": [],
+            "category": "cat",
+            "date": 1695254400000
+        },
+        {
+            "rating": 5,
+            "review": "Toby is an adventurous Abyssinian! He loves to explore every corner.",
+            "images": [],
+            "category": "cat",
+            "date": 1695316800000
+        },
+        {
+            "rating": 4,
+            "review": "Mittens is a calm Russian Blue. Perfect for relaxing evenings.",
+            "images": [],
+            "category": "cat",
+            "date": 1695202800000
+        },
+        {
+            "rating": 2,
+            "review": "Oliver is a bit too active for my lifestyle. Needs lots of playtime.",
+            "images": [],
+            "category": "cat",
+            "date": 1695129600000
+        },
+        {
+            "rating": 5,
+            "review": "Luna is a beautiful cat! She has such a sweet personality.",
+            "images": [],
+            "category": "cat",
+            "date": 1695276000000
+        },
+        {
+            "rating": 4,
+            "review": "Leo is really fun to have around. He makes us laugh every day.",
+            "images": [],
+            "category": "cat",
+            "date": 1695349200000
+        },
+        {
+            "rating": 3,
+            "review": "Bella is lovely but quite shy at first. Needs time to warm up.",
+            "images": [],
+            "category": "cat",
+            "date": 1695116400000
+        },
+        {
+            "rating": 5,
+            "review": "Max is so cuddly and sweet! He loves to sit on my lap.",
+            "images": [],
+            "category": "cat",
+            "date": 1695172800000
+        },
+        {
+            "rating": 4,
+            "review": "Daisy is gorgeous but requires regular grooming.",
+            "images": [],
+            "category": "cat",
+            "date": 1695232800000
+        },
+        {
+            "rating": 5,
+            "review": "Jasper has the most quirky personality! We love him so much.",
+            "images": [],
+            "category": "cat",
+            "date": 1695260400000
+        },
+        {
+            "rating": 3,
+            "review": "Cleo is sweet but can be a bit aloof at times.",
+            "images": [],
+            "category": "cat",
+            "date": 1695147600000
+        },
+        {
+            "rating": 5,
+            "review": "Toby is an amazing cat! Very playful and friendly.",
+            "images": [],
+            "category": "cat",
+            "date": 1695169200000
+        },
+        {
+            "rating": 4,
+            "review": "Mittens is a beautiful cat. She is calm and loving.",
+            "images": [],
+            "category": "cat",
+            "date": 1695229200000
+        },
+        {
+            "rating": 5,
+            "review": "Koda is an energetic Husky! He loves to run and play.",
+            "images": [],
+            "category": "dog",
+            "date": 1695312000000
+        },
+        {
+            "rating": 4,
+            "review": "Niko is a bit independent, but very loving when she wants to be.",
+            "images": [],
+            "category": "dog",
+            "date": 1695250800000
+        },
+        {
+            "rating": 5,
+            "review": "Max is a fantastic dog! He’s friendly with everyone.",
+            "images": [],
+            "category": "dog",
+            "date": 1695183600000
+        },
+        {
+            "rating": 3,
+            "review": "Bella is sweet but needs more training. She's still learning.",
+            "images": [],
+            "category": "dog",
+            "date": 1695333600000
+        },
+        {
+            "rating": 5,
+            "review": "Charlie is so affectionate! He loves to cuddle on the couch.",
+            "images": [],
+            "category": "dog",
+            "date": 1695316800000
+        },
+        {
+            "rating": 4,
+            "review": "Daisy is very playful and keeps us entertained.",
+            "images": [],
+            "category": "dog",
+            "date": 1695225600000
+        },
+        {
+            "rating": 5,
+            "review": "Rocky is amazing! He is so loyal and protective.",
+            "images": [],
+            "category": "dog",
+            "date": 1695211200000
+        },
+        {
+            "rating": 4,
+            "review": "Luna is so playful! We love her energy.",
+            "images": [],
+            "category": "dog",
+            "date": 1695307200000
+        },
+        {
+            "rating": 5,
+            "review": "Cooper is the sweetest dog! He loves to be with us.",
+            "images": [],
+            "category": "dog",
+            "date": 1695187200000
+        },
+        {
+            "rating": 3,
+            "review": "Molly is a bit shy but warms up quickly. She is lovely.",
+            "images": [],
+            "category": "dog",
+            "date": 1695194400000
+        },
+        {
+            "rating": 5,
+            "review": "Bailey is a big softy! He loves to cuddle and play.",
+            "images": [],
+            "category": "dog",
+            "date": 1695320400000
+        },
+        {
+            "rating": 4,
+            "review": "Sadie is adorable but needs some training. She is playful.",
+            "images": [],
+            "category": "dog",
+            "date": 1695165600000
+        },
+        {
+            "rating": 5,
+            "review": "Koda is a fantastic adventure buddy! We love hiking with him.",
+            "images": [],
+            "category": "dog",
+            "date": 1695314400000
+        },
+        {
+            "rating": 4,
+            "review": "Niko is a charming Shiba Inu. Very lively and fun!",
+            "images": [],
+            "category": "dog",
+            "date": 1695235200000
+        },
+        {
+            "rating": 5,
+            "review": "Oliver is a perfect cat! Very loving and playful.",
+            "images": [],
+            "category": "cat",
+            "date": 1695248400000
+        },
+        {
+            "rating": 4,
+            "review": "Luna is quite the character! She's entertaining and sweet.",
+            "images": [],
+            "category": "cat",
+            "date": 1695171600000
+        },
+        {
+            "rating": 5,
+            "review": "Leo is a joyful cat! He loves to play with his toys.",
+            "images": [],
+            "category": "cat",
+            "date": 1695200400000
+        },
+        {
+            "rating": 3,
+            "review": "Bella is beautiful but needs more socialization.",
+            "images": [],
+            "category": "cat",
+            "date": 1695244800000
+        },
+        {
+            "rating": 5,
+            "review": "Max the Scottish Fold is a wonderful pet. Very affectionate!",
+            "images": [],
+            "category": "cat",
+            "date": 1695252000000
+        },
+        {
+            "rating": 4,
+            "review": "Daisy is a lovely Ragdoll. Very friendly and cuddly.",
+            "images": [],
+            "category": "cat",
+            "date": 1695304800000
+        },
+        {
+            "rating": 5,
+            "review": "Jasper is a unique cat! He has such a playful spirit.",
+            "images": [],
+            "category": "cat",
+            "date": 1695142800000
+        },
+        {
+            "rating": 4,
+            "review": "Cleo is very sweet but can be a little shy at first.",
+            "images": [],
+            "category": "cat",
+            "date": 1695163200000
+        },
+        {
+            "rating": 5,
+            "review": "Toby is a fantastic Abyssinian! He’s curious and playful.",
+            "images": [],
+            "category": "cat",
+            "date": 1695207600000
+        },
+        {
+            "rating": 4,
+            "review": "Mittens is calm and gentle. She’s perfect for quiet evenings.",
+            "images": [],
+            "category": "cat",
+            "date": 1695319200000
+        },
+        {
+            "rating": 2,
+            "review": "Oliver is too active for my lifestyle. Needs a lot of attention.",
+            "images": [],
+            "category": "cat",
+            "date": 1695135600000
+        },
+        {
+            "rating": 5,
+            "review": "Luna is such a sweet cat! She cuddles with everyone.",
+            "images": [],
+            "category": "cat",
+            "date": 1695295200000
+        },
+        {
+            "rating": 4,
+            "review": "Leo is full of energy! He keeps us entertained every day.",
+            "images": [],
+            "category": "cat",
+            "date": 1695321600000
+        }
+    ],
+    "dashboard": {
+        "total_products": 90,
+        "product sold": 82,
+        "revenue": 89202,
+        "profit": 42332,
+        "total_stars": 92,
+        "last_month": {
+            "product sold": 82,
+            "revenue": 89202,
+            "profit": 42332,
+            "total_stars": 92
+        }
+    }
+}
