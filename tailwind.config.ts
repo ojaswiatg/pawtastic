@@ -1,19 +1,18 @@
+import { getIconCollections, iconsPlugin } from "@egoist/tailwindcss-icons";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
+    darkMode: ["class"],
     content: [
         "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
         "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
         "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
     ],
-    theme: {
-        extend: {
-            colors: {
-                background: "var(--background)",
-                foreground: "var(--foreground)",
-            },
-        },
-    },
-    plugins: [],
+    plugins: [
+        require("tailwindcss-animate"),
+        iconsPlugin({
+            collections: getIconCollections(["mdi"]),
+        }),
+    ],
 };
 export default config;
