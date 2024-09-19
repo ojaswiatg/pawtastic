@@ -1,10 +1,10 @@
-import AdminAddPet from "@components/admin/AdminAddPet";
+import AdminInventoryAddPet from "@components/admin/AdminInventoryAddPet";
 import React from "react";
 
 function AdminInventory() {
     return (
         <div>
-            <AdminAddPet />
+            <AdminInventoryAddPet />
         </div>
     );
 }
