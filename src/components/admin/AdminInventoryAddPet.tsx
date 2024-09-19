@@ -238,7 +238,7 @@ export default function AdminAddPetForm() {
                             type="number"
                             value={petInfo.price}
                             onChange={handleInputChange}
-                            placeholder="0.00"
+                            placeholder="Base price"
                             className="pl-7"
                         />
                     </div>
