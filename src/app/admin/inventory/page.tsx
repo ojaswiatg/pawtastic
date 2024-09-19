@@ -1,8 +1,8 @@
-import AdminInventory from "@components/admin/AdminInventory";
+import AdminInventoryTable from "@components/admin/AdminInventoryTable";
 import React from "react";
 
 function AdminInventoryPage() {
-    return <AdminInventory />;
+    return <AdminInventoryTable />;
 }
 
 export default AdminInventoryPage;
