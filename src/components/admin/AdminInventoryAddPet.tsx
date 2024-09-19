@@ -15,10 +15,16 @@ import { Textarea } from "@components/ui/textarea";
 import { cn } from "@lib/utils";
 import { ChangeEvent, FormEvent, useState } from "react";
 
+type TAdminInventoryAddPetProps = {
+    className?: string;
+};
+
 const INFO_MAX_CHAR = 240;
 const DESCRIPTION_MAX_CHAR = 4800;
 
-export default function AdminAddPetForm() {
+export default function AdminAddPetForm({
+    className,
+}: TAdminInventoryAddPetProps) {
     const [petInfo, setPetInfo] = useState({
         name: "",
         breed: "",
@@ -76,7 +82,10 @@ export default function AdminAddPetForm() {
     return (
         <form
             onSubmit={handleSubmit}
-            className="min-w-[20rem] h-[32rem] overflow-y-scroll mx-auto p-4"
+            className={cn(
+                "min-w-[20rem] h-[32rem] overflow-y-scroll mx-auto p-1",
+                className,
+            )}
         >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="space-y-2">

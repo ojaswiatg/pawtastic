@@ -1,6 +1,15 @@
 "use client";
 
+import AdminInventoryAddPet from "@components/admin/AdminInventoryAddPet";
 import { Button } from "@components/ui/button";
+import {
+    Dialog,
+    DialogContent,
+    DialogDescription,
+    DialogHeader,
+    DialogTitle,
+    DialogTrigger,
+} from "@components/ui/dialog";
 import {
     DropdownMenu,
     DropdownMenuCheckboxItem,
@@ -305,7 +314,7 @@ export default function AdminInventoryTable() {
 
     return (
         <div className="w-full">
-            <div className="flex items-center flex-wrap gap-2 py-4">
+            <div className="flex items-center flex-wrap gap-2">
                 <Input
                     placeholder="Filter by SKU"
                     value={filters.sku}
@@ -398,19 +407,8 @@ export default function AdminInventoryTable() {
                     </DropdownMenuContent>
                 </DropdownMenu>
             </div>
-            {!isEmpty(rowSelection) ? (
-                <div className="ml-auto w-fit">
-                    <Button
-                        variant="destructive"
-                        className="flex items-center"
-                        onClick={deleteBulk}
-                    >
-                        <div className="i-mdi-delete h-4 w-4" />
-                        <p className="ml-2">Delete</p>
-                    </Button>
-                </div>
-            ) : null}
-            <div className="rounded-md border mt-4">
+
+            <div className="rounded-md border mt-8">
                 <Table>
                     <TableHeader>
                         {table.getHeaderGroups().map((headerGroup) => (
@@ -486,6 +484,32 @@ export default function AdminInventoryTable() {
                         Next
                     </Button>
                 </div>
+            </div>
+
+            <div className="ml-auto flex items-center mt-4 gap-2">
+                <Dialog>
+                    <DialogTrigger className="flex items-center ml-auto bg-primary text-primary-foreground shadow hover:bg-primary/90 h-9 px-4 py-2 rounded-md">
+                        <div className="i-mdi-plus h-4 w-4" />
+                        <p className="ml-1">Add New</p>
+                    </DialogTrigger>
+                    <DialogContent>
+                        <DialogHeader>
+                            <DialogTitle>Add New Item</DialogTitle>
+                            <DialogDescription>Add a new Pet</DialogDescription>
+                        </DialogHeader>
+                        <AdminInventoryAddPet />
+                    </DialogContent>
+                </Dialog>
+                {!isEmpty(rowSelection) ? (
+                    <Button
+                        variant="destructive"
+                        className="flex items-center"
+                        onClick={deleteBulk}
+                    >
+                        <div className="i-mdi-delete h-4 w-4" />
+                        <p className="ml-2">Delete</p>
+                    </Button>
+                ) : null}
             </div>
         </div>
     );
