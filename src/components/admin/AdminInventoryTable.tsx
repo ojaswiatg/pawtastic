@@ -32,13 +32,60 @@ import {
     getPaginationRowModel,
     useReactTable,
 } from "@tanstack/react-table";
-import { filter, includes } from "lodash-es";
+import { filter, includes, isEmpty } from "lodash-es";
 import { ChevronDown } from "lucide-react";
 import * as React from "react";
 import { useEffect, useState } from "react";
 
+import { Checkbox } from "../ui/checkbox";
+
 // Mock data
 const data: Pet[] = [
+    {
+        sku: "DOG001",
+        breed: "Labrador",
+        gender: "male",
+        size: "large",
+        category: "dog",
+        price: 500,
+        discount: 0,
+    },
+    {
+        sku: "CAT001",
+        breed: "Siamese",
+        gender: "female",
+        size: "small",
+        category: "cat",
+        price: 300,
+        discount: 10,
+    },
+    {
+        sku: "DOG002",
+        breed: "German Shepherd",
+        gender: "male",
+        size: "large",
+        category: "dog",
+        price: 600,
+        discount: 5,
+    },
+    {
+        sku: "CAT002",
+        breed: "Persian",
+        gender: "female",
+        size: "medium",
+        category: "cat",
+        price: 400,
+        discount: 0,
+    },
+    {
+        sku: "DOG003",
+        breed: "Chihuahua",
+        gender: "female",
+        size: "small",
+        category: "dog",
+        price: 300,
+        discount: 15,
+    },
     {
         sku: "DOG001",
         breed: "Labrador",
@@ -97,6 +144,25 @@ export type Pet = {
 };
 
 const columns: ColumnDef<Pet>[] = [
+    {
+        accessorKey: "select",
+        header: ({ table }) => (
+            <Checkbox
+                checked={table.getIsAllRowsSelected()}
+                onCheckedChange={(value) =>
+                    table.toggleAllRowsSelected(!!value)
+                }
+                aria-label="Select all"
+            />
+        ),
+        cell: ({ row }) => (
+            <Checkbox
+                checked={row.getIsSelected()}
+                onCheckedChange={(value) => row.toggleSelected(!!value)}
+                aria-label="Select row"
+            />
+        ),
+    },
     {
         accessorKey: "sku",
         header: "SKU",
@@ -166,6 +232,7 @@ const columns: ColumnDef<Pet>[] = [
 ];
 
 export default function AdminInventoryTable() {
+    const [rowSelection, setRowSelection] = useState({});
     const [columnVisibility, setColumnVisibility] = useState<VisibilityState>(
         {},
     );
@@ -186,7 +253,9 @@ export default function AdminInventoryTable() {
         getCoreRowModel: getCoreRowModel(),
         getPaginationRowModel: getPaginationRowModel(),
         onColumnVisibilityChange: setColumnVisibility,
+        onRowSelectionChange: setRowSelection,
         state: {
+            rowSelection,
             columnVisibility,
         },
     });
@@ -222,6 +291,13 @@ export default function AdminInventoryTable() {
         );
     }
 
+    function deleteBulk() {
+        const selectedRows = table
+            .getSelectedRowModel()
+            .flatRows.map((row) => row.original);
+        console.log("Selected Rows:", selectedRows);
+    }
+
     useEffect(() => {
         filterTableData();
         // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -229,7 +305,7 @@ export default function AdminInventoryTable() {
 
     return (
         <div className="w-full">
-            <div className="flex items-center py-4 space-x-2">
+            <div className="flex items-center flex-wrap gap-2 py-4">
                 <Input
                     placeholder="Filter by SKU"
                     value={filters.sku}
@@ -239,59 +315,65 @@ export default function AdminInventoryTable() {
                     className="max-w-sm"
                 />
                 <Input
-                    placeholder="Filter breed..."
+                    placeholder="Filter by breed"
                     value={filters.breed}
                     onChange={(event) =>
                         setFilters({ ...filters, breed: event.target.value })
                     }
                     className="max-w-sm"
                 />
-                <Select
-                    onValueChange={(value) => {
-                        setFilters({ ...filters, gender: value });
-                    }}
-                >
-                    <SelectTrigger>
-                        <SelectValue placeholder="Gender" />
-                    </SelectTrigger>
-                    <SelectContent>
-                        <SelectItem value="all">All</SelectItem>
-                        <SelectItem value="male">Male</SelectItem>
-                        <SelectItem value="female">Female</SelectItem>
-                    </SelectContent>
-                </Select>
-                <Select
-                    onValueChange={(value) => {
-                        setFilters({ ...filters, size: value });
-                    }}
-                >
-                    <SelectTrigger>
-                        <SelectValue placeholder="Size" />
-                    </SelectTrigger>
-                    <SelectContent>
-                        <SelectItem value="all">All</SelectItem>
-                        <SelectItem value="small">Small</SelectItem>
-                        <SelectItem value="medium">Medium</SelectItem>
-                        <SelectItem value="large">Large</SelectItem>
-                    </SelectContent>
-                </Select>
-                <Select
-                    onValueChange={(value) => {
-                        setFilters({ ...filters, category: value });
-                    }}
-                >
-                    <SelectTrigger>
-                        <SelectValue placeholder="Category" />
-                    </SelectTrigger>
-                    <SelectContent>
-                        <SelectItem value="all">All</SelectItem>
-                        <SelectItem value="cat">Cat</SelectItem>
-                        <SelectItem value="dog">Dog</SelectItem>
-                    </SelectContent>
-                </Select>
+                <div className="max-w-32">
+                    <Select
+                        onValueChange={(value) => {
+                            setFilters({ ...filters, gender: value });
+                        }}
+                    >
+                        <SelectTrigger>
+                            <SelectValue placeholder="Gender" />
+                        </SelectTrigger>
+                        <SelectContent>
+                            <SelectItem value="all">All</SelectItem>
+                            <SelectItem value="male">Male</SelectItem>
+                            <SelectItem value="female">Female</SelectItem>
+                        </SelectContent>
+                    </Select>
+                </div>
+                <div className="max-w-32">
+                    <Select
+                        onValueChange={(value) => {
+                            setFilters({ ...filters, size: value });
+                        }}
+                    >
+                        <SelectTrigger>
+                            <SelectValue placeholder="Size" />
+                        </SelectTrigger>
+                        <SelectContent>
+                            <SelectItem value="all">All</SelectItem>
+                            <SelectItem value="small">Small</SelectItem>
+                            <SelectItem value="medium">Medium</SelectItem>
+                            <SelectItem value="large">Large</SelectItem>
+                        </SelectContent>
+                    </Select>
+                </div>
+                <div className="max-w-32">
+                    <Select
+                        onValueChange={(value) => {
+                            setFilters({ ...filters, category: value });
+                        }}
+                    >
+                        <SelectTrigger>
+                            <SelectValue placeholder="Category" />
+                        </SelectTrigger>
+                        <SelectContent>
+                            <SelectItem value="all">All</SelectItem>
+                            <SelectItem value="cat">Cat</SelectItem>
+                            <SelectItem value="dog">Dog</SelectItem>
+                        </SelectContent>
+                    </Select>
+                </div>
                 <DropdownMenu>
                     <DropdownMenuTrigger asChild>
-                        <Button variant="outline" className="ml-auto">
+                        <Button variant="outline">
                             Columns <ChevronDown className="ml-2 h-4 w-4" />
                         </Button>
                     </DropdownMenuTrigger>
@@ -316,7 +398,19 @@ export default function AdminInventoryTable() {
                     </DropdownMenuContent>
                 </DropdownMenu>
             </div>
-            <div className="rounded-md border">
+            {!isEmpty(rowSelection) ? (
+                <div className="ml-auto w-fit">
+                    <Button
+                        variant="destructive"
+                        className="flex items-center"
+                        onClick={deleteBulk}
+                    >
+                        <div className="i-mdi-delete h-4 w-4" />
+                        <p className="ml-2">Delete</p>
+                    </Button>
+                </div>
+            ) : null}
+            <div className="rounded-md border mt-4">
                 <Table>
                     <TableHeader>
                         {table.getHeaderGroups().map((headerGroup) => (

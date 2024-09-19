@@ -74,7 +74,10 @@ export default function AdminAddPetForm() {
     };
 
     return (
-        <form onSubmit={handleSubmit} className="max-w-4xl mx-auto p-4">
+        <form
+            onSubmit={handleSubmit}
+            className="min-w-[20rem] h-[32rem] overflow-y-scroll mx-auto p-4"
+        >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="space-y-2">
                     <Label htmlFor="name">Name</Label>
@@ -261,10 +264,13 @@ export default function AdminAddPetForm() {
                     </div>
                 </div>
             </div>
-            <Button type="submit" className="mt-6">
-                <div className="i-mdi-plus h-4 w-4" />
-                <div className="ml-1">Add</div>
-            </Button>
+
+            <div className="ml-auto w-fit">
+                <Button type="submit" className="mt-6 w-fit ml-auto">
+                    <div className="i-mdi-plus h-4 w-4" />
+                    <p className="ml-1">Add</p>
+                </Button>
+            </div>
         </form>
     );
 }

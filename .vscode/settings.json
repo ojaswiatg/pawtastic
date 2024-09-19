@@ -2,6 +2,7 @@
     "npm.packageManager": "bun",
     "debug.onTaskErrors": "debugAnyway",
     "diffEditor.ignoreTrimWhitespace": false,
+
     "editor.emptySelectionClipboard": true,
     "editor.linkedEditing": true,
     "editor.guides.bracketPairs": "active",
@@ -13,10 +14,18 @@
     "editor.unicodeHighlight.invisibleCharacters": false,
     "editor.stickyScroll.enabled": true,
     "editor.hover.sticky": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+    "editor.wordWrap": "on",
+    "editor.wordWrapColumn": 80,
+
     "window.autoDetectColorScheme": true,
     "workbench.tree.expandMode": "singleClick",
     "workbench.tree.indent": 16,
     "workbench.list.smoothScrolling": true,
+    "workbench.tree.renderIndentGuides": "none",
+
     "eslint.validate": [
         "javascript",
         "typescript",
@@ -30,9 +39,5 @@
     ],
     "files.associations": {
         "*.scss": "postcss"
-    },
-    "workbench.tree.renderIndentGuides": "none",
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": true,
-    "editor.formatOnPaste": true
+    }
 }
