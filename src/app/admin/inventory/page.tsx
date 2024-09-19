@@ -1,4 +1,4 @@
-import AdminInventory from "@/components/admin/AdminInventory";
+import AdminInventory from "@components/admin/AdminInventory";
 import React from "react";
 
 function AdminInventoryPage() {
