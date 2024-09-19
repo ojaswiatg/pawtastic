@@ -12,3 +12,7 @@ size - filter
 category - filter
 price
 discount
+
+## Forms
+
+1. Add validations only on the client side code.
