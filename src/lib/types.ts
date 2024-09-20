@@ -19,4 +19,20 @@ export const PetSchema = z.object({
     description: z.string().nullish(),
 });
 
+export const AddPetFormSchema = z.object({
+    sku: z.string(),
+    name: z.string(),
+    category: z.nativeEnum(EPetCategory),
+    breed: z.string(),
+    size: z.nativeEnum(EPetSize),
+    gender: z.nativeEnum(EPetGender),
+    color: z.string().nullish(),
+    vaccinated: z.boolean(),
+    dewormed: z.boolean(),
+    price: z.number(),
+    discount: z.number(),
+    info: z.string().nullish(),
+    description: z.string().nullish(),
+});
+
 export type TPetSchema = z.infer<typeof PetSchema>;
