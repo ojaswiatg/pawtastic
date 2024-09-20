@@ -1,5 +1,13 @@
 "use client";
 
+import {
+    EPetCategory,
+    EPetCategoryUI,
+    EPetGender,
+    EPetGenderUI,
+    EPetSize,
+    EPetSizeUI,
+} from "@/lib/enums";
 import { Button } from "@components/ui/button";
 import { Checkbox } from "@components/ui/checkbox";
 import { Input } from "@components/ui/input";
@@ -87,7 +95,7 @@ export default function AdminAddPetForm({
                 className,
             )}
         >
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mr-12">
                 <div className="space-y-2">
                     <Label htmlFor="name">Name</Label>
                     <Input
@@ -120,8 +128,12 @@ export default function AdminAddPetForm({
                             <SelectValue placeholder="Select gender" />
                         </SelectTrigger>
                         <SelectContent>
-                            <SelectItem value="male">Male</SelectItem>
-                            <SelectItem value="female">Female</SelectItem>
+                            <SelectItem value={EPetGender.MALE}>
+                                {EPetGenderUI.MALE}
+                            </SelectItem>
+                            <SelectItem value={EPetGender.FEMALE}>
+                                {EPetGenderUI.FEMALE}
+                            </SelectItem>
                         </SelectContent>
                     </Select>
                 </div>
@@ -137,9 +149,15 @@ export default function AdminAddPetForm({
                             <SelectValue placeholder="Select size" />
                         </SelectTrigger>
                         <SelectContent>
-                            <SelectItem value="small">Small</SelectItem>
-                            <SelectItem value="medium">Medium</SelectItem>
-                            <SelectItem value="large">Large</SelectItem>
+                            <SelectItem value={EPetSize.SMALL}>
+                                {EPetSizeUI.SMALL}
+                            </SelectItem>
+                            <SelectItem value={EPetSize.MEDIUM}>
+                                {EPetSizeUI.MEDIUM}
+                            </SelectItem>
+                            <SelectItem value={EPetSize.LARGE}>
+                                {EPetSizeUI.LARGE}
+                            </SelectItem>
                         </SelectContent>
                     </Select>
                 </div>
@@ -233,8 +251,12 @@ export default function AdminAddPetForm({
                             <SelectValue placeholder="Select category" />
                         </SelectTrigger>
                         <SelectContent>
-                            <SelectItem value="cat">Cat</SelectItem>
-                            <SelectItem value="dog">Dog</SelectItem>
+                            <SelectItem value={EPetCategory.CAT}>
+                                {EPetCategoryUI.CAT}
+                            </SelectItem>
+                            <SelectItem value={EPetCategory.DOG}>
+                                {EPetCategoryUI.DOG}
+                            </SelectItem>
                         </SelectContent>
                     </Select>
                 </div>
@@ -275,7 +297,7 @@ export default function AdminAddPetForm({
             </div>
 
             <div className="ml-auto w-fit">
-                <Button type="submit" className="mt-6 w-fit ml-auto">
+                <Button type="submit" className="mt-6 w-fit ml-auto mr-12">
                     <div className="i-mdi-plus h-4 w-4" />
                     <p className="ml-1">Add</p>
                 </Button>

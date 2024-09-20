@@ -1,6 +1,7 @@
 "use client";
 
 import { Button } from "@components/ui/button";
+import { Checkbox } from "@components/ui/checkbox";
 import {
     DropdownMenu,
     DropdownMenuCheckboxItem,
@@ -25,6 +26,15 @@ import {
     TableRow,
 } from "@components/ui/table";
 import {
+    EPetCategory,
+    EPetCategoryUI,
+    EPetGender,
+    EPetGenderUI,
+    EPetSize,
+    EPetSizeUI,
+} from "@lib/enums";
+import { TPetSchema } from "@lib/types";
+import {
     ColumnDef,
     VisibilityState,
     flexRender,
@@ -37,113 +47,101 @@ import { ChevronDown } from "lucide-react";
 import * as React from "react";
 import { useEffect, useState } from "react";
 
-import { Checkbox } from "../ui/checkbox";
-
 // Mock data
-const data: Pet[] = [
+const data: TPetSchema[] = [
     {
         sku: "DOG001",
         breed: "Labrador",
-        gender: "male",
-        size: "large",
-        category: "dog",
+        gender: EPetGender.MALE,
+        size: EPetSize.LARGE,
+        category: EPetCategory.DOG,
         price: 500,
         discount: 0,
     },
     {
         sku: "CAT001",
         breed: "Siamese",
-        gender: "female",
-        size: "small",
-        category: "cat",
+        gender: EPetGender.FEMALE,
+        size: EPetSize.SMALL,
+        category: EPetCategory.CAT,
         price: 300,
         discount: 10,
     },
     {
         sku: "DOG002",
         breed: "German Shepherd",
-        gender: "male",
-        size: "large",
-        category: "dog",
+        gender: EPetGender.MALE,
+        size: EPetSize.LARGE,
+        category: EPetCategory.DOG,
         price: 600,
         discount: 5,
     },
     {
         sku: "CAT002",
         breed: "Persian",
-        gender: "female",
-        size: "medium",
-        category: "cat",
+        gender: EPetGender.FEMALE,
+        size: EPetSize.MEDIUM,
+        category: EPetCategory.CAT,
         price: 400,
         discount: 0,
     },
     {
         sku: "DOG003",
         breed: "Chihuahua",
-        gender: "female",
-        size: "small",
-        category: "dog",
+        gender: EPetGender.FEMALE,
+        size: EPetSize.SMALL,
+        category: EPetCategory.DOG,
         price: 300,
         discount: 15,
     },
     {
         sku: "DOG001",
         breed: "Labrador",
-        gender: "male",
-        size: "large",
-        category: "dog",
+        gender: EPetGender.MALE,
+        size: EPetSize.LARGE,
+        category: EPetCategory.DOG,
         price: 500,
         discount: 0,
     },
     {
         sku: "CAT001",
         breed: "Siamese",
-        gender: "female",
-        size: "small",
-        category: "cat",
+        gender: EPetGender.FEMALE,
+        size: EPetSize.SMALL,
+        category: EPetCategory.CAT,
         price: 300,
         discount: 10,
     },
     {
         sku: "DOG002",
         breed: "German Shepherd",
-        gender: "male",
-        size: "large",
-        category: "dog",
+        gender: EPetGender.MALE,
+        size: EPetSize.LARGE,
+        category: EPetCategory.DOG,
         price: 600,
         discount: 5,
     },
     {
         sku: "CAT002",
         breed: "Persian",
-        gender: "female",
-        size: "medium",
-        category: "cat",
+        gender: EPetGender.FEMALE,
+        size: EPetSize.MEDIUM,
+        category: EPetCategory.CAT,
         price: 400,
         discount: 0,
     },
     {
         sku: "DOG003",
         breed: "Chihuahua",
-        gender: "female",
-        size: "small",
-        category: "dog",
+        gender: EPetGender.FEMALE,
+        size: EPetSize.SMALL,
+        category: EPetCategory.DOG,
         price: 300,
         discount: 15,
     },
 ];
 
-export type Pet = {
-    sku: string;
-    breed: string;
-    gender: string;
-    size: string;
-    category: string;
-    price: number;
-    discount: number;
-};
-
-const columns: ColumnDef<Pet>[] = [
+const columns: ColumnDef<TPetSchema>[] = [
     {
         accessorKey: "select",
         header: ({ table }) => (
@@ -322,7 +320,7 @@ export default function AdminInventoryTable() {
                     }
                     className="max-w-sm"
                 />
-                <div className="max-w-32">
+                <div className="w-28">
                     <Select
                         onValueChange={(value) => {
                             setFilters({ ...filters, gender: value });
@@ -333,12 +331,16 @@ export default function AdminInventoryTable() {
                         </SelectTrigger>
                         <SelectContent>
                             <SelectItem value="all">All</SelectItem>
-                            <SelectItem value="male">Male</SelectItem>
-                            <SelectItem value="female">Female</SelectItem>
+                            <SelectItem value={EPetGender.MALE}>
+                                {EPetGenderUI.MALE}
+                            </SelectItem>
+                            <SelectItem value={EPetGender.FEMALE}>
+                                {EPetGenderUI.FEMALE}
+                            </SelectItem>
                         </SelectContent>
                     </Select>
                 </div>
-                <div className="max-w-32">
+                <div className="w-28">
                     <Select
                         onValueChange={(value) => {
                             setFilters({ ...filters, size: value });
@@ -349,13 +351,19 @@ export default function AdminInventoryTable() {
                         </SelectTrigger>
                         <SelectContent>
                             <SelectItem value="all">All</SelectItem>
-                            <SelectItem value="small">Small</SelectItem>
-                            <SelectItem value="medium">Medium</SelectItem>
-                            <SelectItem value="large">Large</SelectItem>
+                            <SelectItem value={EPetSize.SMALL}>
+                                {EPetSizeUI.SMALL}
+                            </SelectItem>
+                            <SelectItem value={EPetSize.MEDIUM}>
+                                {EPetSizeUI.MEDIUM}
+                            </SelectItem>
+                            <SelectItem value={EPetSize.LARGE}>
+                                {EPetSizeUI.LARGE}
+                            </SelectItem>
                         </SelectContent>
                     </Select>
                 </div>
-                <div className="max-w-32">
+                <div className="w-28">
                     <Select
                         onValueChange={(value) => {
                             setFilters({ ...filters, category: value });
@@ -366,13 +374,17 @@ export default function AdminInventoryTable() {
                         </SelectTrigger>
                         <SelectContent>
                             <SelectItem value="all">All</SelectItem>
-                            <SelectItem value="cat">Cat</SelectItem>
-                            <SelectItem value="dog">Dog</SelectItem>
+                            <SelectItem value={EPetCategory.CAT}>
+                                {EPetCategoryUI.CAT}
+                            </SelectItem>
+                            <SelectItem value={EPetCategory.DOG}>
+                                {EPetCategoryUI.DOG}
+                            </SelectItem>
                         </SelectContent>
                     </Select>
                 </div>
                 <DropdownMenu>
-                    <DropdownMenuTrigger asChild>
+                    <DropdownMenuTrigger asChild className="w-28">
                         <Button variant="outline">
                             Columns <ChevronDown className="ml-2 h-4 w-4" />
                         </Button>

@@ -3,7 +3,7 @@
     "ignorePatterns": ["*.json", "*.md"],
     "rules": {
         "prefer-const": "error",
-        "no-unused-vars": [
+        "@typescript-eslint/no-unused-vars": [
             "error",
             {
                 "argsIgnorePattern": "^_"
