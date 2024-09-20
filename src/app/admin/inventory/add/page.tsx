@@ -4,9 +4,11 @@ import React from "react";
 function AdminInventoryAddPage() {
     return (
         <div>
-            <p className="text-2xl">Add New Item</p>
-            <p className="text-md text-gray-500">Add a new Pet</p>
-            <AdminAddPetForm className="mt-4 h-full" />
+            <p className="text-4xl font-bold">Add New Item</p>
+            <p className="text-md text-gray-500 mb-8">
+                Add a new Pet to the inventory
+            </p>
+            <AdminAddPetForm className="h-full" />
         </div>
     );
 }

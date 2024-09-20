@@ -399,14 +399,16 @@ export default function AdminInventoryTable() {
                 </DropdownMenu>
 
                 {!isEmpty(rowSelection) ? (
-                    <Button
-                        variant="destructive"
-                        className="flex items-center"
-                        onClick={deleteBulk}
-                    >
-                        <div className="i-mdi-delete h-4 w-4" />
-                        <p className="ml-2">Delete</p>
-                    </Button>
+                    <div className="ml-auto">
+                        <Button
+                            variant="destructive"
+                            className="flex items-center"
+                            onClick={deleteBulk}
+                        >
+                            <div className="i-mdi-delete h-4 w-4" />
+                            <p className="ml-2">Delete</p>
+                        </Button>
+                    </div>
                 ) : null}
             </div>
 

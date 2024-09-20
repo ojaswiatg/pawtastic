@@ -13,6 +13,10 @@ import React from "react";
 function AdminInventoryPage() {
     return (
         <div>
+            <p className="text-4xl font-bold">Manage Inventory</p>
+            <p className="text-md text-gray-500 mb-8">
+                Manage your inventory here
+            </p>
             <AdminInventoryTable />
             <Dialog>
                 <DialogTrigger className="flex items-center mt-8 ml-auto bg-primary text-primary-foreground shadow hover:bg-primary/90 h-9 px-3 py-6 rounded-full">
